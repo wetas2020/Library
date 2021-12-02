@@ -11,10 +11,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class AuthorManagementTest extends TestCase
 {
     use RefreshDatabase;
-/** @test */
+    /** @test */
     public function an_author_can_be_created() {
 
-        $this->withoutExceptionHandling();
+        // $this->withoutExceptionHandling();
         $response = $this->post('/author', [
             'name' => 'Author Name',
             'dob' => '05/14/1988',
@@ -27,4 +27,5 @@ class AuthorManagementTest extends TestCase
         $this->assertEquals('1988/14/05', $author->first()->dob->format('Y/d/m'));
         // $response->assertRedirect('/books/' . $book->id);
     }
+
 }
