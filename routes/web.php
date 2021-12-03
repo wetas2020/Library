@@ -19,3 +19,11 @@ Route::delete('/books/{book}', [App\Http\Controllers\BooksController::class, 'de
 
 
 Route::post('/author', [App\Http\Controllers\AuthorsController::class, 'store']);
+
+Route::post('/checkout/{book}', [App\Http\Controllers\CheckoutBookController::class, 'store']);
+
+Route::post('/checkin/{book}', [App\Http\Controllers\CheckinBookController::class, 'store']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
