@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "tailwindcss": "^2.2.19",
         "webpack": "^5.64.4"
     }
 }

@@ -18,7 +18,8 @@ Route::patch('/books/{book}', [App\Http\Controllers\BooksController::class, 'upd
 Route::delete('/books/{book}', [App\Http\Controllers\BooksController::class, 'destroy']);
 
 
-Route::post('/author', [App\Http\Controllers\AuthorsController::class, 'store']);
+Route::post('/authors', [App\Http\Controllers\AuthorsController::class, 'store']);
+Route::get('/authors/create', [App\Http\Controllers\AuthorsController::class, 'create']);
 
 Route::post('/checkout/{book}', [App\Http\Controllers\CheckoutBookController::class, 'store']);
 
